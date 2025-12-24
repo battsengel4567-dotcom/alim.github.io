@@ -3,32 +3,225 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alim TikTok Style</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Alim - TikTok Style</title>
+    <style>
+        /* CSS ХЭСЭГ */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        body {
+            background-color: #000;
+            color: #fff;
+            overflow: hidden; /* Үндсэн body-г гүйлгэхгүй */
+        }
+
+        /* Төв контейнер */
+        .app-container {
+            height: 100vh;
+            overflow-y: scroll;
+            scroll-snap-type: y mandatory; /* TikTok шиг тас хийж гүйх эффект */
+            scroll-behavior: smooth;
+        }
+
+        .app-container::-webkit-scrollbar {
+            display: none; /* Scrollbar-ыг нуух */
+        }
+
+        /* Видео карт бүр */
+        .video-card {
+            height: 100vh;
+            width: 100%;
+            scroll-snap-align: start;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            padding-bottom: 30px;
+            border-bottom: 0.5px solid #222;
+        }
+
+        /* Дээд талын цэс */
+        .top-nav {
+            position: absolute;
+            top: 20px;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            font-weight: bold;
+            z-index: 10;
+            opacity: 0.8;
+        }
+
+        .top-nav span {
+            cursor: pointer;
+            font-size: 17px;
+        }
+
+        .top-nav .active {
+            border-bottom: 2px solid white;
+            padding-bottom: 5px;
+        }
+
+        /* Контент болон тайлбар */
+        .video-info {
+            padding: 20px;
+            width: 80%;
+            z-index: 5;
+        }
+
+        .user-handle {
+            font-weight: bold;
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+        }
+
+        .video-desc {
+            font-size: 0.95rem;
+            line-height: 1.4;
+            margin-bottom: 10px;
+        }
+
+        /* Баруун талын товчлуурнууд */
+        .side-bar {
+            position: absolute;
+            right: 15px;
+            bottom: 100px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+            z-index: 5;
+        }
+
+        .icon-group {
+            text-align: center;
+            cursor: pointer;
+        }
+
+        .icon-circle {
+            width: 45px;
+            height: 45px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 24px;
+            margin-bottom: 5px;
+            transition: transform 0.2s;
+        }
+
+        .icon-circle:active {
+            transform: scale(0.8);
+        }
+
+        .icon-group p {
+            font-size: 12px;
+            font-weight: 500;
+        }
+
+        /* Хөгжмийн дискний анимаци */
+        .music-album {
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(45deg, #333, #000);
+            border: 8px solid #222;
+            border-radius: 50%;
+            animation: rotate 3s linear infinite;
+        }
+
+        @keyframes rotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        /* Дэвсгэр өнгө (Дараа нь видео болгож солино) */
+        .bg-1 { background: linear-gradient(to bottom, #1e3c72, #2a5298); }
+        .bg-2 { background: linear-gradient(to bottom, #ee0979, #ff6a00); }
+        .bg-3 { background: linear-gradient(to bottom, #00b09b, #96c93d); }
+
+    </style>
 </head>
 <body>
 
+    <div class="top-nav">
+        <span>Дагаж буй</span>
+        <span class="active">Танд зориулсан</span>
+    </div>
+
     <div class="app-container">
-        <section class="video-card" style="background-color: #ff4757;">
-            <div class="content">
-                <h2>@alim_user</h2>
-                <p>Энэ бол анхны бичлэг эсвэл зураг #wow</p>
+        
+        <section class="video-card bg-1">
+            <div class="video-info">
+                <div class="user-handle">@alim_official</div>
+                <div class="video-desc">Миний анхны GitHub Pages сайт! TikTok шиг харагдаж байна уу? 🔥 #coding #alim</div>
+            </div>
+            <div class="side-bar">
+                <div class="icon-group">
+                    <div class="icon-circle">❤️</div>
+                    <p>12.5K</p>
+                </div>
+                <div class="icon-group">
+                    <div class="icon-circle">💬</div>
+                    <p>342</p>
+                </div>
+                <div class="icon-group">
+                    <div class="icon-circle">🔗</div>
+                    <p>Share</p>
+                </div>
+                <div class="music-album"></div>
             </div>
         </section>
 
-        <section class="video-card" style="background-color: #2ed573;">
-            <div class="content">
-                <h2>@alim_user</h2>
-                <p>GitHub Pages дээр TikTok шиг сайт хийж байна!</p>
+        <section class="video-card bg-2">
+            <div class="video-info">
+                <div class="user-handle">@battsengel_dev</div>
+                <div class="video-desc">Энэхүү сайтыг HTML болон CSS ашиглан хийв. Маш амархан! 💻✨</div>
+            </div>
+            <div class="side-bar">
+                <div class="icon-group">
+                    <div class="icon-circle">❤️</div>
+                    <p>8.1K</p>
+                </div>
+                <div class="icon-group">
+                    <div class="icon-circle">💬</div>
+                    <p>120</p>
+                </div>
+                <div class="icon-group">
+                    <div class="icon-circle">🔗</div>
+                    <p>Share</p>
+                </div>
+                <div class="music-album"></div>
             </div>
         </section>
 
-        <section class="video-card" style="background-color: #1e90ff;">
-            <div class="content">
-                <h2>@alim_user</h2>
-                <p>Дараагийн пост руу доош гүйлгээрэй...</p>
+        <section class="video-card bg-3">
+            <div class="video-info">
+                <div class="user-handle">@creative_alim</div>
+                <div class="video-desc">Илүү ихийг сурмаар байвал дагаарай. Доошоо гүйлгэж дараагийнхыг үзээрэй... 👇</div>
+            </div>
+            <div class="side-bar">
+                <div class="icon-group">
+                    <div class="icon-circle">❤️</div>
+                    <p>20K</p>
+                </div>
+                <div class="icon-group">
+                    <div class="icon-circle">💬</div>
+                    <p>500</p>
+                </div>
+                <div class="icon-group">
+                    <div class="icon-circle">🔗</div>
+                    <p>Share</p>
+                </div>
+                <div class="music-album"></div>
             </div>
         </section>
+
     </div>
 
 </body>
