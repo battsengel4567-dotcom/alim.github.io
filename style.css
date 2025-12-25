@@ -1,48 +1,45 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 body {
-    background-color: black;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #1a1a2e;
     color: white;
-    font-family: 'Segoe UI', sans-serif;
-}
-
-.app-container {
-    /* TikTok эффект өгөх гол хэсэг */
-    height: 100vh;
-    overflow-y: scroll;
-    scroll-snap-type: y mandatory;
-}
-
-.video-card {
-    height: 100vh;
-    width: 100%;
-    scroll-snap-align: start;
-    position: relative;
     display: flex;
-    align-items: flex-end;
-    padding: 40px 20px;
-    border-bottom: 1px solid #333;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
 }
 
-.content {
-    margin-bottom: 20px;
+.container {
+    background-color: #16213e;
+    padding: 40px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    width: 350px;
 }
 
-.content h2 {
-    font-size: 1.2rem;
-    margin-bottom: 10px;
+h1 { color: #4ecca3; }
+
+.ad-slot {
+    background: #0f3460;
+    height: 100px;
+    margin: 20px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px dashed #4ecca3;
 }
 
-.content p {
-    font-size: 1rem;
-    color: #eee;
+button {
+    background-color: #e94560;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 18px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
 }
 
-/* Scrollbar-ыг нуух (Илүү цэвэрхэн харагдуулна) */
-.app-container::-webkit-scrollbar {
-    display: none;
-}
+button:hover { background-color: #ff2e63; }
+button:disabled { background-color: #555; cursor: not-allowed; }
