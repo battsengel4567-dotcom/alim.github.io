@@ -1,0 +1,14 @@
+const mongoose = require('mongoose');
+
+const postSchema = new mongoose.Schema({
+  user: String,
+  type: { type: String, enum: ['video', 'image', 'text'] }, // Netflix vs Instagram
+  contentUrl: String, // Бичлэг эсвэл зургийн линк
+  caption: String,
+  likes: [{ type: String }],
+  comments: [{ user: String, text: String }],
+  isAd: { type: Boolean, default: false }, // Зар сурталчилгааны хэсэг
+  createdAt: { type: Date, default: Date.now }
+});
+
+module.exports = mongoose.model('Post', postSchema);
