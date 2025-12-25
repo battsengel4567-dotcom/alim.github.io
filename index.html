@@ -2,20 +2,82 @@
 <html lang="mn">
 <head>
     <meta charset="UTF-8">
-    <title>Миний Видео Сан</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alim Video Platform</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-    <header>
-        <h1>YouTube шиг систем</h1>
+
+    <header class="navbar">
+        <div class="logo"><i class="fab fa-youtube"></i> AlimTube</div>
+        <div class="search-bar">
+            <input type="text" placeholder="Хайх...">
+            <button><i class="fa fa-search"></i></button>
+        </div>
+        <div class="profile-icons">
+            <i class="fa fa-video"></i>
+            <i class="fa fa-bell"></i>
+            <img src="https://via.placeholder.com/35" alt="Profile" class="user-avatar">
+        </div>
     </header>
-    
-    <div class="video-container">
-        <video width="800" controls>
-            <source src="videos/video1.mp4" type="video/mp4">
-            Таны хөтөч видеог дэмжихгүй байна.
-        </video>
-        <h3>Миний анхны бичлэг</h3>
-    </div>
+
+    <main class="content">
+        <section class="video-player-section">
+            <div class="main-video">
+                <video controls poster="https://via.placeholder.com/800x450">
+                    <source src="your-video.mp4" type="video/mp4">
+                </video>
+                <h2>Миний хийсэн анхны вэбсайт (Tutorial)</h2>
+                
+                <div class="video-actions">
+                    <div class="author-info">
+                        <img src="https://via.placeholder.com/40" class="user-avatar">
+                        <div>
+                            <h4>Battsengel</h4>
+                            <span>1.2K дагагчтай</span>
+                        </div>
+                        <button class="sub-btn">Subscribe</button>
+                    </div>
+                    <div class="buttons">
+                        <button><i class="fa fa-thumbs-up"></i> 15K</button>
+                        <button><i class="fa fa-thumbs-down"></i></button>
+                        <button><i class="fa fa-share"></i> Share</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="comment-section">
+                <h3>Коммент хэсэг</h3>
+                <div class="add-comment">
+                    <img src="https://via.placeholder.com/35" class="user-avatar">
+                    <input type="text" placeholder="Сэтгэгдэл үлдээх...">
+                </div>
+                <div class="comment">
+                    <img src="https://via.placeholder.com/35" class="user-avatar">
+                    <div class="comment-text">
+                        <strong>User123</strong> <span>2 цагийн өмнө</span>
+                        <p>Маш хэрэгтэй заавар байна, баярлалаа!</p>
+                        <div class="comment-btns"><i class="fa fa-thumbs-up"></i> 12 <i class="fa fa-thumbs-down"></i> Reply</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <aside class="sidebar-list">
+            <h3>Shorts</h3>
+            <div class="shorts-container">
+                <div class="short-card">
+                    <img src="https://via.placeholder.com/150x250" alt="Short">
+                    <p>Coding Life #shorts</p>
+                </div>
+                <div class="short-card">
+                    <img src="https://via.placeholder.com/150x250" alt="Short">
+                    <p>New App 2024</p>
+                </div>
+            </div>
+        </aside>
+    </main>
+
 </body>
 </html>
