@@ -1,94 +1,37 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #fcfcfc;
-    padding: 20px;
-}
-
-.header {
-    text-align: center;
-    padding: 30px 0;
-}
-
-.header h1 {
-    color: #333;
-    font-size: 28px;
-}
-
-/* Grid Layout (Хайрцагуудыг зэрэгцүүлэх) */
-.grid-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-    gap: 20px;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-/* Картны ерөнхий загвар */
-.card {
-    background: white;
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-    transition: transform 0.2s;
-    text-align: center;
-    border: 1px solid #eee;
-}
-
-.card:hover {
-    transform: translateY(-5px);
-}
-
-/* Зургийн хэсэг */
-.card-image {
+/* Modal (Далд байгаа цонх) */
+.modal {
+    display: none; /* Эхлээд харагдахгүй */
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
     width: 100%;
-    height: 180px;
-    background-color: #f9f9f9;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    height: 100%;
+    background-color: rgba(0,0,0,0.7); /* Ар тал нь бүрхэг */
 }
 
-.card-image img {
-    max-width: 90%;
-    max-height: 90%;
-    object-fit: contain;
+/* Цонхны дотор тал */
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto;
+    padding: 20px;
+    border-radius: 15px;
+    width: 80%;
+    max-width: 600px;
+    position: relative;
+    animation: zoomIn 0.3s;
 }
 
-.card-content {
-    padding: 15px;
+/* Хаах товчлуур (x) */
+.close {
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    font-size: 28px;
+    cursor: pointer;
 }
 
-.card-content h3 {
-    font-size: 18px;
-    margin-bottom: 8px;
+@keyframes zoomIn {
+    from {transform: scale(0.5); opacity: 0;}
+    to {transform: scale(1); opacity: 1;}
 }
-
-.card-content p {
-    color: #777;
-    font-size: 14px;
-    margin-bottom: 15px;
-    height: 40px; /* Текстүүдийг ижил хэмжээтэй харагдуулна */
-}
-
-/* Товчлуур */
-.btn {
-    display: inline-block;
-    background-color: #f0f0f0;
-    color: #333;
-    padding: 8px 20px;
-    border-radius: 20px;
-    text-decoration: none;
-    font-size: 14px;
-    font-weight: bold;
-}
-
-/* Medle шиг өөр өөр өнгө оруулах */
-.card-orange { border-top: 6px solid #ffcc00; }
-.card-green { border-top: 6px solid #4db6ac; }
-.card-pink { border-top: 6px solid #f06292; }

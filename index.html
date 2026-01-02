@@ -1,45 +1,23 @@
-<!DOCTYPE html>
-<html lang="mn">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Мэхний Сан | Сургалт</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-
-    <header class="header">
-        <h1>Бөхийн Мэхний Цахим Сан</h1>
-        <p>Сурахыг хүссэн мэхээ сонгоно уу</p>
-    </header>
-
-    <div class="container">
-        <div class="grid-container">
-            
-            <div class="card card-orange">
-                <div class="card-image">
-                    <img src="https://github.com/user-attachments/assets/4b0d6325-2227-44ed-9ba3-8d8761167228" alt="Хавиргах">
-                </div>
-                <div class="card-content">
-                    <h3>Хавиргах мэх</h3>
-                    <p>Ар талаас нь тэвэрч, хөлөөр нь голлох техник</p>
-                    <a href="#" class="btn">Үзэх</a>
-                </div>
-            </div>
-
-            <div class="card card-green">
-                <div class="card-image">
-                    <img src="https://github.com/user-attachments/assets/4b0d6325-2227-44ed-9ba3-8d8761167228" alt="Мордох">
-                </div>
-                <div class="card-content">
-                    <h3>Мордох мэх</h3>
-                    <p>Хөлөөрөө гадна талаас нь ороож унагах техник</p>
-                    <a href="#" class="btn">Үзэх</a>
-                </div>
-            </div>
-
-            </div>
+<div class="card card-orange">
+    <div class="card-image">
+        <img src="хавирах.jpg" alt="Хавиргах">
     </div>
+    <div class="card-content">
+        <h3>Хавиргах мэх</h3>
+        <p>Ар талаас нь тэвэрч, хөлөөр нь голлох техник.</p>
+        <button class="btn" onclick="openModal('modal1')">Үзэх</button>
+    </div>
+</div>
 
-</body>
-</html>
+<div id="modal1" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal('modal1')">&times;</span>
+        <h2>Хавиргах мэхний заавар</h2>
+        <img src="хавирах.jpg" style="width:100%; border-radius: 8px;">
+        <div class="instruction">
+            <p><strong>Алхам 1:</strong> Өрсөлдөгчийг ар талаас нь тэвэрнэ.</p>
+            <p><strong>Алхам 2:</strong> Хөлөөр нь голлож тэнцвэрийг алдагдуулна.</p>
+            <p><strong>Алхам 3:</strong> Хажуу тийш нь өргөж шиднэ.</p>
+        </div>
+    </div>
+</div>
