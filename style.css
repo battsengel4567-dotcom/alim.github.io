@@ -1,107 +1,39 @@
-:root {
-    --text-color: #292929;
-    --meta-color: #757575;
-    --bg-color: #ffffff;
-    --accent: #1a8917; /* Medium-ийн ногоон өнгө */
-}
-
+:root {/* Үндсэн тохиргоо */
 body {
+    font-family: 'Georgia', serif; /* Medium-ийн уламжлалт төрх */
+    line-height: 1.6;
+    color: #292929;
+    background-color: #fff;
     margin: 0;
     padding: 0;
-    background-color: var(--bg-color);
-    color: var(--text-color);
-    font-family: 'Inter', sans-serif;
-    -webkit-font-smoothing: antialiased;
 }
 
-.container {
-    max-width: 680px; /* Medium-ийн стандарт унших хэмжээ */
+/* Текстийг голлуулах (Уншихад хамгийн тохиромжтой хэмжээ) */
+.content-wrapper {
+    max-width: 700px;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 40px 20px;
 }
 
-/* Navbar */
-.navbar {
-    padding: 20px 0;
-    border-bottom: 1px solid #eeeeee;
-    margin-bottom: 50px;
-}
-
-.navbar .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.logo {
-    font-weight: 700;
-    font-size: 20px;
-}
-
-/* Post Header */
-.post-title {
-    font-family: 'Lora', serif;
+/* Гарчиг */
+h1 {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
     font-size: 42px;
-    line-height: 1.2;
-    margin-bottom: 12px;
     font-weight: 700;
+    margin-bottom: 20px;
 }
 
-.post-meta {
-    color: var(--meta-color);
-    font-size: 14px;
-    margin-bottom: 30px;
-}
-
-/* Featured Image */
-.post-featured-image {
-    width: 100%;
-    max-width: 1000px;
-    margin: 0 auto 40px;
-    text-align: center;
-}
-
-.post-featured-image img {
+/* Зураг (Medium стилийн бүрэн дэлгэц эсвэл цэгцтэй) */
+.main-image {
     width: 100%;
     height: auto;
+    margin: 20px 0;
     border-radius: 4px;
 }
 
-/* Content */
-.post-content {
-    font-family: 'Lora', serif;
+/* Мэхний тайлбар текст */
+p {
     font-size: 21px;
-    line-height: 1.58;
-    letter-spacing: -0.003em;
-}
-
-.post-content h2, .post-content h3 {
-    font-family: 'Inter', sans-serif;
-    margin-top: 56px;
-}
-
-.dropcap {
-    float: left;
-    font-size: 80px;
-    line-height: 60px;
-    padding-top: 4px;
-    padding-right: 8px;
-    font-weight: 700;
-}
-
-blockquote {
-    font-style: italic;
-    border-left: 3px solid var(--text-color);
-    padding-left: 20px;
-    margin: 40px 0;
-    color: #555;
-    font-size: 24px;
-}
-
-.footer {
-    border-top: 1px solid #eeeeee;
-    padding: 50px 0;
-    text-align: center;
-    color: var(--meta-color);
-    margin-top: 100px;
+    margin-bottom: 30px;
+    color: rgba(41, 41, 41, 1);
 }
