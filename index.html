@@ -1,23 +1,52 @@
-<div class="card card-orange">
-    <div class="card-image">
-        <img src="хавирах.jpg" alt="Хавиргах">
-    </div>
-    <div class="card-content">
-        <h3>Хавиргах мэх</h3>
-        <p>Ар талаас нь тэвэрч, хөлөөр нь голлох техник.</p>
-        <button class="btn" onclick="openModal('modal1')">Үзэх</button>
-    </div>
-</div>
+<!DOCTYPE html>
+<html lang="mn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мэхний Сан | alim.com</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
 
-<div id="modal1" class="modal">
-    <div class="modal-content">
-        <span class="close" onclick="closeModal('modal1')">&times;</span>
-        <h2>Хавиргах мэхний заавар</h2>
-        <img src="хавирах.jpg" style="width:100%; border-radius: 8px;">
-        <div class="instruction">
-            <p><strong>Алхам 1:</strong> Өрсөлдөгчийг ар талаас нь тэвэрнэ.</p>
-            <p><strong>Алхам 2:</strong> Хөлөөр нь голлож тэнцвэрийг алдагдуулна.</p>
-            <p><strong>Алхам 3:</strong> Хажуу тийш нь өргөж шиднэ.</p>
+    <header class="header">
+        <h1>Бөхийн Мэхний Цахим Сан</h1>
+        <p>Сурахыг хүссэн мэхээ сонгоно уу</p>
+    </header>
+
+    <div class="container">
+        <div class="grid-container">
+            
+            <div class="card card-orange">
+                <div class="card-image">
+                    <img src="хавирах.jpg" alt="Хавиргах">
+                </div>
+                <div class="card-content">
+                    <h3>Хавиргах мэх</h3>
+                    <p>Ар талаас нь тэвэрч, хөлөөр нь голлох техник</p>
+                    <button class="btn" onclick="openModal('modal1')">Үзэх</button>
+                </div>
+            </div>
+
+            </div>
+    </div>
+
+    <div id="modal1" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal1')">&times;</span>
+            <h2>Хавиргах мэхний заавар</h2>
+            <img src="хавирах.jpg" class="modal-img">
+            <div class="instruction-text">
+                <p><strong>Тайлбар:</strong> Бөхийн энэ мэх нь өрсөлдөгчийг ар талаас нь тэвэрч, хөлөөр нь голлон шидэх үйлдэл юм.</p>
+                <ul>
+                    <li>1. Өрсөлдөгчийг ар талаас нь бат тэвэрнэ.</li>
+                    <li>2. Өөрийн ташааг ашиглан өргөнө.</li>
+                    <li>3. Хөлөөрөө хавирч газардуулна.</li>
+                </ul>
+            </div>
         </div>
     </div>
-</div>
+
+    <script src="script.js"></script>
+</body>
+</html>

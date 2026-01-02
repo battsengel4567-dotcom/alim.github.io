@@ -6,9 +6,9 @@ function closeModal(id) {
     document.getElementById(id).style.display = "none";
 }
 
-// Цонхноос гадуур дарахад хаагдах
+// Цонхны гадна талд дарахад хаагдах
 window.onclick = function(event) {
-    if (event.target.className === 'modal') {
+    if (event.target.classList.contains('modal')) {
         event.target.style.display = "none";
     }
 }
