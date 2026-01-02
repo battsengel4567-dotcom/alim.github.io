@@ -1,25 +1,30 @@
-/* General Styling */
+:root {
+    --text-color: #292929;
+    --meta-color: #757575;
+    --bg-color: #ffffff;
+    --accent: #1a8917; /* Medium-ийн ногоон өнгө */
+}
+
 body {
-    font-family: 'Montserrat', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f7f6; /* Цайвар саарал дэвсгэр */
-    color: #333;
-    line-height: 1.6;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: 'Inter', sans-serif;
+    -webkit-font-smoothing: antialiased;
 }
 
 .container {
-    max-width: 1200px;
+    max-width: 680px; /* Medium-ийн стандарт унших хэмжээ */
     margin: 0 auto;
     padding: 0 20px;
 }
 
-/* Header/Navbar */
+/* Navbar */
 .navbar {
-    background-color: #2c3e50; /* Хар хөх */
-    color: #ecf0f1; /* Цайвар цагаан */
-    padding: 15px 0;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    padding: 20px 0;
+    border-bottom: 1px solid #eeeeee;
+    margin-bottom: 50px;
 }
 
 .navbar .container {
@@ -28,256 +33,75 @@ body {
     align-items: center;
 }
 
-.navbar .logo a {
-    color: #ecf0f1;
-    text-decoration: none;
-    font-size: 24px;
+.logo {
+    font-weight: 700;
+    font-size: 20px;
+}
+
+/* Post Header */
+.post-title {
+    font-family: 'Lora', serif;
+    font-size: 42px;
+    line-height: 1.2;
+    margin-bottom: 12px;
     font-weight: 700;
 }
 
-.navbar .nav-links a {
-    color: #bdc3c7;
-    text-decoration: none;
-    margin-left: 25px;
-    font-weight: 600;
-    transition: color 0.3s ease;
-}
-
-.navbar .nav-links a:hover,
-.navbar .nav-links a.active {
-    color: #3498db; /* Цэнхэр */
-}
-
-.navbar .search-bar {
-    display: flex;
-    align-items: center;
-    background-color: #34495e;
-    border-radius: 20px;
-    padding: 5px 15px;
-}
-
-.navbar .search-bar input {
-    background: none;
-    border: none;
-    color: #ecf0f1;
-    outline: none;
-    padding: 5px 0;
-    width: 150px;
-}
-
-.navbar .search-bar input::placeholder {
-    color: #bdc3c7;
-}
-
-.navbar .search-bar .fas {
-    color: #bdc3c7;
-    margin-left: 10px;
-}
-
-/* Main Content */
-.main-content {
-    padding: 60px 0;
-}
-
-.technique-title {
-    font-size: 3.5em; /* Том гарчиг */
-    color: #2c3e50;
-    text-align: center;
-    margin-bottom: 10px;
-    font-weight: 700;
-    line-height: 1.1;
-}
-
-.subtitle {
-    font-size: 1.3em;
-    color: #7f8c8d;
-    text-align: center;
-    margin-bottom: 50px;
-}
-
-.technique-showcase {
-    display: flex;
-    gap: 40px;
-    background-color: #ffffff;
-    padding: 40px;
-    border-radius: 15px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-    align-items: flex-start;
-}
-
-.image-gallery {
-    flex: 2;
-    text-align: center;
-    position: relative;
-    background-color: #ecf0f1; /* Зургийн ард талын дэвсгэр */
-    padding: 20px;
-    border-radius: 10px;
-}
-
-.image-gallery img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 8px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-}
-
-.image-caption {
-    margin-top: 20px;
-    font-style: italic;
-    color: #555;
-    font-size: 1.1em;
-}
-
-.technique-details {
-    flex: 3;
-    padding-left: 20px;
-}
-
-.technique-details h2 {
-    color: #3498db; /* Цэнхэр гарчиг */
-    font-size: 2em;
-    margin-bottom: 25px;
-    border-bottom: 2px solid #ecf0f1;
-    padding-bottom: 10px;
-}
-
-.details-section {
+.post-meta {
+    color: var(--meta-color);
+    font-size: 14px;
     margin-bottom: 30px;
 }
 
-.details-section ul {
-    list-style: none;
-    padding: 0;
-}
-
-.details-section ul li {
-    background-color: #eaf6fd; /* Цайвар цэнхэр фон */
-    padding: 15px 20px;
-    margin-bottom: 10px;
-    border-radius: 8px;
-    display: flex;
-    align-items: center;
-    font-size: 1.1em;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-}
-
-.details-section ul li:hover {
-    background-color: #d1ecf1;
-    transform: translateY(-3px);
-}
-
-.details-section ul li i {
-    color: #3498db;
-    margin-right: 15px;
-    font-size: 1.2em;
-}
-
-.details-section p {
-    font-size: 1.1em;
-    color: #555;
-    margin-bottom: 15px;
-}
-
-.btn-primary {
-    display: inline-block;
-    background-color: #2ecc71; /* Ногоон товч */
-    color: white;
-    padding: 15px 30px;
-    border-radius: 8px;
-    text-decoration: none;
-    font-weight: 700;
-    font-size: 1.2em;
-    margin-top: 20px;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-}
-
-.btn-primary:hover {
-    background-color: #27ae60;
-    transform: translateY(-2px);
-}
-
-/* Footer */
-.footer {
-    background-color: #2c3e50;
-    color: #ecf0f1;
-    padding: 30px 0;
+/* Featured Image */
+.post-featured-image {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto 40px;
     text-align: center;
-    margin-top: 60px;
 }
 
-.footer p {
-    margin-bottom: 15px;
-    font-size: 0.9em;
-    color: #bdc3c7;
+.post-featured-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
 }
 
-.footer .social-links a {
-    color: #ecf0f1;
-    font-size: 1.5em;
-    margin: 0 10px;
-    transition: color 0.3s ease;
+/* Content */
+.post-content {
+    font-family: 'Lora', serif;
+    font-size: 21px;
+    line-height: 1.58;
+    letter-spacing: -0.003em;
 }
 
-.footer .social-links a:hover {
-    color: #3498db;
+.post-content h2, .post-content h3 {
+    font-family: 'Inter', sans-serif;
+    margin-top: 56px;
 }
 
-/* Responsive Design */
-@media (max-width: 992px) {
-    .technique-showcase {
-        flex-direction: column;
-    }
-    .technique-details {
-        padding-left: 0;
-        margin-top: 40px;
-    }
-    .navbar .nav-links {
-        display: none; /* Гар утсан дээр navigation-ийг нууна */
-    }
-    .navbar .container {
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-    .navbar .logo, .navbar .search-bar {
-        margin-bottom: 15px;
-    }
-    .navbar .search-bar {
-        width: 100%;
-        justify-content: center;
-    }
-    .navbar .search-bar input {
-        width: 80%;
-    }
-    .technique-title {
-        font-size: 2.5em;
-    }
-    .subtitle {
-        font-size: 1.1em;
-    }
+.dropcap {
+    float: left;
+    font-size: 80px;
+    line-height: 60px;
+    padding-top: 4px;
+    padding-right: 8px;
+    font-weight: 700;
 }
 
-@media (max-width: 576px) {
-    .main-content {
-        padding: 30px 0;
-    }
-    .technique-showcase {
-        padding: 20px;
-        gap: 20px;
-    }
-    .technique-title {
-        font-size: 2em;
-    }
-    .subtitle {
-        font-size: 1em;
-        margin-bottom: 30px;
-    }
-    .details-section h2 {
-        font-size: 1.8em;
-    }
-    .btn-primary {
-        padding: 12px 25px;
-        font-size: 1.1em;
-        width: 100%;
-        text-align: center;
-    }
+blockquote {
+    font-style: italic;
+    border-left: 3px solid var(--text-color);
+    padding-left: 20px;
+    margin: 40px 0;
+    color: #555;
+    font-size: 24px;
+}
+
+.footer {
+    border-top: 1px solid #eeeeee;
+    padding: 50px 0;
+    text-align: center;
+    color: var(--meta-color);
+    margin-top: 100px;
 }
