@@ -5,45 +5,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>alim.com | Бөхийн Мэх</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
 </head>
-<body>
+<body class="dark-theme">
 
     <header class="header">
         <div class="logo">🍎 alim<span>.com</span></div>
         
-        <div class="search-box">
+        <div class="search-container">
             <input type="text" id="searchInput" onkeyup="searchMehs()" placeholder="Мэх хайх...">
         </div>
 
         <div class="announcement">
-            <span class="status-dot"></span> Өдөр бүр нэг мэх шинээр нэмэгдэх болно
+            <span class="live-dot"></span> Өдөр бүр нэг мэх шинээр нэмэгдэх болно
         </div>
     </header>
 
-    <div class="container">
-        <div class="card-grid" id="mehGrid">
-            
-            <div class="card" data-title="хавиргах">
-                <div class="card-image">
-                    <img src="хавирах.jpg" alt="Хавиргах">
+    <main class="container">
+        <div class="grid" id="mehGrid">
+            <div class="card" data-name="хавиргах">
+                <div class="card-img-box">
+                    <img src="havirah.jpg" alt="Хавиргах">
                 </div>
-                <div class="card-content">
+                <div class="card-info">
                     <h3>Хавиргах мэх</h3>
                     <p>Техник, хүч, ур чадвар</p>
-                    <button class="btn" onclick="openModal('modal1')">Үзэх</button>
+                    <button class="view-btn" onclick="openModal('modal1')">Үзэх</button>
                 </div>
             </div>
-
-            </div>
-    </div>
+        </div>
+    </main>
 
     <div id="modal1" class="modal">
-        <div class="modal-content">
-            <span class="close" onclick="closeModal('modal1')">&times;</span>
+        <div class="modal-body">
+            <span class="close-btn" onclick="closeModal('modal1')">&times;</span>
             <h2>Хавиргах мэхний заавар</h2>
-            <img src="хавирах.jpg" class="modal-img">
-            <p>Бөхийн энэ мэх нь өрсөлдөгчийг ар талаас нь тэвэрч, хөлөөр нь голлох үйлдэл юм.</p>
+            <img src="havirah.jpg" class="modal-img">
+            <p>Өрсөлдөгчийг ар талаас нь тэвэрч, хөлөөр нь голлон шидэх техник.</p>
         </div>
     </div>
 
