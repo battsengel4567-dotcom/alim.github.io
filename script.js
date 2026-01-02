@@ -6,21 +6,7 @@ function closeModal(id) {
     document.getElementById(id).style.display = "none";
 }
 
-// Цонхны гадна талд дарахад хаагдах
-window.onclick = function(event) {
-    if (event.target.classList.contains('modal')) {
-        event.target.style.display = "none";
-    }
-}
-function openModal(id) {
-    document.getElementById(id).style.display = "block";
-}
-
-function closeModal(id) {
-    document.getElementById(id).style.display = "none";
-}
-
-// ХАЙЛТЫН ФУНКЦ
+// Хайлтын логик
 function searchMehs() {
     let input = document.getElementById('searchInput').value.toLowerCase();
     let cards = document.getElementsByClassName('card');
@@ -35,7 +21,7 @@ function searchMehs() {
     }
 }
 
-// Гадна талд дарахад хаагдах
+// Гадуур дарахад хаагдах
 window.onclick = function(event) {
     if (event.target.className === 'modal') {
         event.target.style.display = "none";
