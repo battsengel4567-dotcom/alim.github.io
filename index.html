@@ -3,27 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Мэхний Сан | alim.com</title>
+    <title>alim.com | Бөхийн Мэхний Сан</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
 
     <header class="header">
-        <h1>Бөхийн Мэхний Цахим Сан</h1>
-        <p>Сурахыг хүссэн мэхээ сонгоно уу</p>
+        <div class="logo">
+            <span class="apple-icon">🍎</span> alim<span>.com</span>
+        </div>
+        
+        <h1>Мэхний Цахим Агуулах</h1>
+        
+        <div class="search-box">
+            <input type="text" id="searchInput" onkeyup="searchMehs()" placeholder="Мэх хайх...">
+        </div>
+
+        <div class="announcement">
+            <span class="dot"></span> Өдөр бүр нэг мэх шинээр нэмэгдэх болно
+        </div>
     </header>
 
     <div class="container">
-        <div class="grid-container">
+        <div class="card-grid" id="mehGrid">
             
-            <div class="card card-orange">
+            <div class="card" data-title="хавиргах">
                 <div class="card-image">
                     <img src="хавирах.jpg" alt="Хавиргах">
                 </div>
                 <div class="card-content">
                     <h3>Хавиргах мэх</h3>
-                    <p>Ар талаас нь тэвэрч, хөлөөр нь голлох техник</p>
+                    <p>Техник, хүч, ур чадвар</p>
                     <button class="btn" onclick="openModal('modal1')">Үзэх</button>
                 </div>
             </div>
@@ -36,14 +47,7 @@
             <span class="close" onclick="closeModal('modal1')">&times;</span>
             <h2>Хавиргах мэхний заавар</h2>
             <img src="хавирах.jpg" class="modal-img">
-            <div class="instruction-text">
-                <p><strong>Тайлбар:</strong> Бөхийн энэ мэх нь өрсөлдөгчийг ар талаас нь тэвэрч, хөлөөр нь голлон шидэх үйлдэл юм.</p>
-                <ul>
-                    <li>1. Өрсөлдөгчийг ар талаас нь бат тэвэрнэ.</li>
-                    <li>2. Өөрийн ташааг ашиглан өргөнө.</li>
-                    <li>3. Хөлөөрөө хавирч газардуулна.</li>
-                </ul>
-            </div>
+            <p>Бөхийн энэ мэх нь өрсөлдөгчийг ар талаас нь тэвэрч, хөлөөр нь голлон шидэх үйлдэл юм.</p>
         </div>
     </div>
 
